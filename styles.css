@@ -21,6 +21,22 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+  /* border: 4px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none!important;
+}
+
+/* Header Section */
+
 header {
   background-color: #0fb9b1;
   margin-top: -10px;
@@ -32,11 +48,7 @@ header {
   padding-right: 30px;
 }
 
-button:hover {
-  cursor: pointer;
-}
-
-.addRecipeButton {
+.headerButton {
   align-self: center;
   background-color: rgba(225, 225, 225);
   padding: 10px 10px 10px 10px;
@@ -45,17 +57,13 @@ button:hover {
   transition: 0.5s;
 }
 
-.addRecipeButton:hover{
+.headerButton:hover{
   background-color: #c7c5c5;
 }
 
-main {
-  /* border: 4px solid blue; */
-  display: flex;
-  justify-content: space-evenly;
-}
+/* User Input Section */
 
-.userInputContainer {
+.userInputSection {
   /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
   width: 450px;
@@ -101,7 +109,7 @@ main {
   margin-bottom: 15px;
 }
 
-.letsCookButton {
+.mainButton {
   background-color: #0fb9b1;
   border-style: none;
   border-radius: 5px;
@@ -110,11 +118,13 @@ main {
   transition: 0.5s;
 }
 
-.letsCookButton:hover {
+.mainButton:hover {
   background-color: #0fa8a1;
 }
 
-.suggestionsContainer {
+/* Suggestions Section */
+
+.suggestionsSection {
   /* border: 2px solid red; */
   background-color: rgba(225, 225, 225, .9);
   width: 450px;
@@ -133,6 +143,7 @@ main {
 
 .suggestion {
   /* border: 2px solid red; */
+  width: 375px;
   display: flex column;
   justify-content: center;
   align-items: center;
@@ -148,9 +159,69 @@ main {
   margin-bottom: 0px;
 }
 
-.foodSuggestion {
+.foodSuggestionClass {
   /* border: 2px solid blue; */
   font-size: 40px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
+}
+
+/* Favorites Section */
+
+.favoritesSection {
+  /* border: 2px solid red; */
+  background-color: rgba(225, 225, 225, .9);
+  width: 900px;
+  height: 500px;
+  margin: 50px 0px 50px 0px;
+}
+
+.noFavoritesContainer {
+  /* border: 2px solid red; */
+  display: flex column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.favoriteRecipesDisplay {
+  /* border: 2px solid purple; */
+  width: 900px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.savedRecipe {
+  border: 2px solid #0fb9b1;
+  font-size: 18px;
+  height: 125px;
+  width: 200px;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.savedRecipe:hover {
+  cursor: pointer;
+  background-color: #0fb9b1
+}
+
+.favoritesTitle {
+  /* border: 2px solid red; */
+  position: relative;
+  text-align: center;
+}
+
+.deleteRecipeP {
+  /* border: 2px solid red; */
+  margin-top: -15px;
 }

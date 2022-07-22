@@ -5,12 +5,16 @@
     <title>What's For Dinner?</title>
   </head>
   <body>
-    <header>
+    <header class="homeHeader">
       <h3>What's for Dinner?</h3>
-      <button class="addRecipeButton">ADD A RECIPE</button>
+      <button class="headerButton" id="viewFavoritesButton">VIEW FAVORITE RECIPES</button>
+    </header>
+    <header class="favoritesHeader hidden">
+      <h3>What's for Dinner?</h3>
+      <button class="headerButton" id="homeButton">BACK TO COOKING</button>
     </header>
     <main>
-      <section class="userInputContainer">
+      <section class="userInputSection">
         <div class="interfaceContainer">
           <div class="questionContainer">
             <div class="lookingForContainer">
@@ -36,10 +40,18 @@
               <input type="radio" id="entireMeal" name="dish" value="entireMeal">
               <label for="entireMeal">Entire Meal</label>
             </div>
-            <button class="letsCookButton">LET'S COOK!</button>
+            <button class="mainButton" id="letsCookButton">LET'S COOK!</button>
         </div>
       </section>
-      <section class="suggestionsContainer">
+      <section class="suggestionsSection">
+      </section>
+      <section class="favoritesSection hidden">
+        <div class="favoritesTitle">
+          <h1>Your Favorite Recipes:</h1>
+          <p class="deleteRecipeP">Want to delete a recipe? Double click it!</p>
+        </div>
+        <div class="favoriteRecipesDisplay">
+        </div>
       </section>
     </main>
   </body>
